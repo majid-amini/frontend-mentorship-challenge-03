@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>challenge-03</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header_section">
+            <div class="title">  
+            <h2>travel with us</h2>
+            </div>
+            <div class="account">  
+                <span>account</span>   
+                <i class="fas fa-house-user"></i>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main class="main">
+           <section>
+               <form action="#">
+                <div class="first-item">
+                    <label>where you go?</label>
+                    <select required name="region" id="region">
+                        <option disabled selected  value="">select a region</option>
+                        <option  value="Iran">Iran</option>
+                        <option  value="the united states">The united states</option>
+                        <option  value="turkey">turkey</option>
+                        <option  value="canada">canda</option>
+                    </select>
+                </div>
+                <div class="second-item">
+                    <label>check in</label>
+                    <input required class="date" type="date" placeholder="add a date">
+                    
+                </div>
+                <div class="third-item">
+                    <label>checkout</label>
+                   <input required class="date" type="date" placeholder="add a date">
+                </div>
+                <div class="last-item">
+                    <input type="submit" value="search">
+                </div>
+               
+               </form>
+              
+           </section>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      
+    flatpickr("input[type=date]", {
+         minDate: "today"
+    });
+    </script>
+    
+    
+</body>
+</html>

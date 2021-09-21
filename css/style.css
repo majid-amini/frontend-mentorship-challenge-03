@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', 'sans-serif';
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: url(../image/nature.jpeg) no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+}
+
+.header_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0.2rem;
+  padding: 1rem 1.5rem;
+  color: #16A085;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-left: 3rem;
+}
+
+.account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #16A085;
+  background-color: #fff;
+  padding: 2rem;
+  margin-right: 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.account span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.account i {
+  font-size: 3rem;
+  color: #B75D5D;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.account:hover i {
+  color: #16A085;
+}
+
+.account:hover span {
+  color: rgba(22, 160, 133, 0.7);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main section {
+  width: none;
+  height: none;
+  margin: 0;
+  padding: 2rem;
+  color: none;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form div {
+  border-right: 0.2rem solid #ccc;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+}
+
+form div label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+form div.last-item, .third-item {
+  border: none;
+}
+
+select, select option {
+  text-transform: lowercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.date {
+  width: 100%;
+  position: relative;
+  text-transform: lowercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.date::-webkit-calendar-picker-indicator {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  text-transform: lowercase;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.last-item input {
+  width: 10rem;
+  height: 3rem;
+  background: #16A085;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.last-item input:hover {
+  background-color: rgba(22, 160, 133, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .account {
+    padding: 1.5rem;
+  }
+  .account i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .account {
+    width: 9rem;
+    height: 4rem;
+    margin-right: 0;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  .account i {
+    font-size: 2rem;
+  }
+  .account span {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  .main section {
+    width: 30rem;
+    height: 30rem;
+  }
+  .main form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main form div {
+    width: 100%;
+  }
+  .main form div.first-item, .second-item {
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+  .last-item input {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,184 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+body {
+   background: url(../image/nature.jpeg)no-repeat top center ;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+}
+.header_section {
+    @include flexBox(row, space-between, center);
+    @include size(100%, 100%, 0.2rem, 1rem 1.5rem);
+    color: $green;
+}
+.title {
+    @include font(1.8rem, 500);
+    margin-left: 3rem;
+}
+.account {
+    @include flexBox(row, space-around, center);
+    @include color($green, $white);
+    padding: 2rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    
+}
+.account span {
+   @include font(1.5rem, 500);
+   margin-right: 1rem;
+   transition: 0.3s;
+}
+
+.account i{
+    font-size: 3rem;
+    color: $brown;
+    transition: 0.3s;
+}
+.account:hover i {
+    color: $green;
+}
+.account:hover span {
+    color: rgba($green,0.7);
+}
+
+//start section main//
+.main {
+    @include flexBox(row, center, center);
+    height: 100%;
+}
+.main section {
+    @include size(none, none, 0, 2rem);
+    @include color(none, $white);
+    border-radius: 2rem;
+}
+form {
+    @include flexBox(row, space-around, center);
+}
+form div {
+    border-right: 0.2rem solid #ccc;
+    width: 25%;
+    @include flexBox(column, space-around, flex-start);
+    padding: 1rem;
+}
+form div label {
+    @include font(1.5rem, 500);
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+form div.last-item,.third-item {
+    border: none;
+}
+
+select, select option {
+    text-transform: lowercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  .date {
+      width: 100%;
+      position: relative;
+     text-transform: lowercase;
+     border: none;
+     outline: none;
+     cursor: pointer;
+  }
+  .date::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    text-transform: lowercase;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  .last-item input {
+    width: 10rem;
+    height: 3rem;
+    background: $green;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+ 
+  .last-item input:hover {
+      background-color: rgba($green, 0.8);
+  }
+//end of main section//
+
+
+@media screen and (max-width:$ipad) {
+    h2{
+        font-size: 2rem;
+    }
+    .account {
+        padding: 1.5rem;
+    }
+    .account i{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:$mobile) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .account {
+        width: 9rem;
+        height: 4rem;
+        margin-right: 0;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    .account i {
+        font-size: 2rem;
+    }
+    .account span {
+        font-size: 1.3rem;
+        margin-right: 0.5rem;
+    }
+    .main section{
+        width: 30rem;
+        height: 30rem;
+    }
+    .main form {
+        flex-direction: column;
+    }
+    .main form div {
+        width: 100%;
+     
+    }
+    .main form div.first-item,.second-item {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+    }
+    .last-item input {
+        align-self: center;
+    }
+}
